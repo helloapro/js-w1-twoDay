@@ -1,0 +1,19 @@
+$color: 	#d36154;
+
+h1 {
+  color: $color;
+}
+
+.row > [class*='col-']{
+  border: 2px solid white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding-left: 0px;
+}
+
+li {
+  margin: 1rem auto;
+}
