@@ -14,7 +14,7 @@
       <h1>Apewa</h1>
       <h2>READING! AND! NEWS?</h2>
         <p>Has your book been in the news? Has your news been in a book? With this REVOLUTIONARY app, for the first time EWAr (do you see what we did there?), you can find out! No need to thank us.</p>
-        <form id="">
+        <form id="book-search">
           <div class = "form-group">
             <label for="searchInput">Enter a book to search for:</label>
             <input type="text" class="form-control" id="searchInput" required>
@@ -24,17 +24,18 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-3 well">
+        <div class="col-sm-10 col-sm-push-2 well">
+          <h3>Search Results:</h3>
+          <div id="searchResults">
+          </div>
+
+
+        </div>
+        <div class="col-sm-2 col-sm-pull-10 well">
           <h3>Books in the News!</h3>
           <ul id="newsBooks">
           </ul>
         </div>
-        <div class="col-sm-9 well">
-          <h3>Search Results:</h3>
-          <ul id="searchResults">
-          </ul>
-        </div>
-
       </div>
 
     </div>
