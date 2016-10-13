@@ -7,6 +7,9 @@ $(function(){
   $("#event-search").submit(function(event){
     event.preventDefault();
     $("#map").empty();
+    $("#eventPanel").show();
+    $("#collapseOne").collapse('hide');
+    $("#collapseThree").collapse('show');
     $('.event').matchHeight({ remove: true });
     $("#eventResults").empty();
     var zip = $("#zipInput").val();

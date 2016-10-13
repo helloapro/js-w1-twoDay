@@ -42,15 +42,49 @@
 
       <div class="big-row row">
         <div class="col-sm-10 col-sm-push-2 well">
-          <h3>Search Results:</h3>
-          <div id="searchResults">
+          <!-- start accordion -->
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div id="searchPanel" class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Search Results
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div id="searchResults" class="panel-body">
+                </div>
+              </div>
+            </div>
+            <div id="newsPanel" class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    News Results
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div id="newsResults" class="panel-body">
+                </div>
+              </div>
+            </div>
+            <div id="eventPanel" class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Event Results
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div id ="eventResults" class="panel-body">
+                </div>
+              </div>
+            </div>
           </div>
-          <h3>News Results:</h3>
-          <div id="newsResults">
-          </div>
-          <h3>Event Results:</h3>
-          <div id="eventResults">
-          </div>
+          <!--end accordion-->
         </div>
         <div class="col-sm-2 col-sm-pull-10 well">
           <h3>Books in the News!</h3>

@@ -5,6 +5,10 @@ var parseString = require('xml2js').parseString;
 $(function(){
   $("#book-search").submit(function(event){
     event.preventDefault();
+    $("#collapseOne").collapse('show');
+    $("#collapseThree").collapse('hide');
+    $("#searchPanel").show();
+    $("#newsPanel").show();
     $('.book').matchHeight({ remove: true });
     $("#searchResults").empty();
     $("#newsResults").empty();
