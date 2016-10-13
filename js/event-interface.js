@@ -32,7 +32,7 @@ $(function(){
             $("#eventResults").append("<div class='row'><div class='col-md-3 event'><img class='img-responsive center-block' src='" + events[i].image_url[0] + "'> </div><div class='col-md-9 event'>Event Name: <a href='" + events[i].link[0] + "'><strong>" +
             events[i].title[0] + "</a></strong><br> Date: " +
             formattedDate + " <br> Venue: " +
-            events[i].venue[0] + "</div></div>");
+            events[i].venue[0] + "</div></div><hr>");
             var address = events[i].address[0] + " " + events[i].postal_code[0];
             var title = events[i].title[0];
             appendMarkers(address, title);
