@@ -34,7 +34,8 @@ $(function(){
             formattedDate + " <br> Venue: " +
             events[i].venue[0] + "</div></div>");
             var address = events[i].address[0] + " " + events[i].postal_code[0];
-            appendMarkers(address);
+            var title = events[i].title[0];
+            appendMarkers(address, title);
           }
         });
       }).then(function(){
@@ -55,8 +56,9 @@ $(function(){
 // 	});
 // }
 
-function appendMarkers(address){
+function appendMarkers(address, title){
+  title = title.replace(/[\'\\\^\?\+\{\(\|\)\*]/g, "");
   $.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + googleKey).then(function(response){
-      $("#map").append("<script>var latLng = new google.maps.LatLng(" + response.results[0].geometry.location.lat + "," + response.results[0].geometry.location.lng + "); var marker = new google.maps.Marker({position: latLng}); marker.setMap(map);</script>");
+      $("#map").append("<script>var infowindow = new google.maps.InfoWindow({}); var latLng = new google.maps.LatLng(" + response.results[0].geometry.location.lat + "," + response.results[0].geometry.location.lng + "); var marker = new google.maps.Marker({position: latLng}); marker.setMap(map); google.maps.event.addListener(marker, 'click', (function(marker){return function() {infowindow.setContent( '" + title + "'); infowindow.open(map, marker);}})(marker));</script>");
   });
 }
