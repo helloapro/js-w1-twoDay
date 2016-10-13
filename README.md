@@ -15,6 +15,7 @@ _A template for javascript with node.js in the backend, backend dependencies man
 * _run bower install_
 * _run gulp build to build the project for the first time and gulp serve to start the development server_
 * _assuming you get an alert and your h1 is kind of orangeypink you should be good to go!_
+* _if your h1 is not orangeypink, you might not have sass installed! if you have ruby installed run gem install sass. If you do not have ruby installed, install that first_
 
 
 ## GitHub link
