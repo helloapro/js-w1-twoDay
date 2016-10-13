@@ -6,21 +6,35 @@
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Template</title>
+    <title>ApEwa</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-      <h1>Apewa</h1>
+      <h1>ApEwa</h1>
       <h2>READING! AND! NEWS?</h2>
         <p>Has your book been in the news? Has your news been in a book? With this REVOLUTIONARY app, for the first time EWAr (do you see what we did there?), you can find out! No need to thank us.</p>
-        <form id="book-search">
-          <div class = "form-group">
-            <label for="searchInput">Enter a book to search for:</label>
-            <input type="text" class="form-control" id="searchInput" required>
+        <div class="row">
+          <div class="col-sm-6">
+            <form id="book-search">
+              <div class = "form-group">
+                <label for="searchInput">Enter a book to search for:</label>
+                <input type="text" class="form-control" id="searchInput" required>
+              </div>
+              <button type="submit" class="btn btn-info">Look up your book!</button>
+            </form>
           </div>
-          <button type="submit" class="btn btn-info">Look up your book!</button>
-        </form>
+          <div class="col-sm-6">
+            <form id="event-search">
+              <div class = "form-group">
+                <label for="zipInput">Enter a zip code:</label>
+                <input type="text" pattern ="\d{5}" class="form-control" id="zipInput" placeholder="#####" required>
+              </div>
+              <button type="submit" class="btn btn-info">Find events in your area!</button>
+            </form>
+          </div>
+        </div>
+
       </div>
 
       <div class="row">
@@ -28,8 +42,12 @@
           <h3>Search Results:</h3>
           <div id="searchResults">
           </div>
-
-
+          <h3>News Results:</h3>
+          <div id="newsResults">
+          </div>
+          <h3>Event Results:</h3>
+          <div id="eventResults">
+          </div>
         </div>
         <div class="col-sm-2 col-sm-pull-10 well">
           <h3>Books in the News!</h3>
